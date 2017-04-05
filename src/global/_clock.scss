@@ -1,9 +1,45 @@
 #clockdiv {
     display: flex;
+    text-align: right;
+    line-height: 0;
     > div {
         flex: 1;
     }
     p {
         display: none;
+    }
+    .days {
+        font-size: 140px;
+        margin-top: 70px;
+    }
+    .hours {
+        font-size: 70px;
+        margin-top: 48px;
+    }
+    span {
+        display: block;
+    }
+    div {
+        position: relative;
+    }
+    .clock-text {
+        position: absolute;
+        right: 0;
+        bottom: -25px;
+    }
+    .hours-column {
+        .clock-text {
+            bottom: -35px;
+        }
+    }
+    .minutes-column {
+        display: flex;
+        > div {
+            flex: 1;
+            .minutes, .seconds {
+                font-size: 35px;
+                margin-top: 60px;
+            }
+        }
     }
 }
