@@ -1,0 +1,24 @@
+body {
+    position: relative;
+    background: black url("/wp-content/uploads/2017/04/nasa-stemnauts-space-background.jpg") fixed center;
+    min-height: 100vh;
+    #page {
+        width: 960px;
+        margin: 0 auto;
+        .header {
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 30px;
+            .header-left {
+                float: left;
+                width: 20%;
+            }
+            .header-right {
+                float: right;
+                a {
+                    padding-left: 30px;
+                }
+            }
+        }
+    }
+}
