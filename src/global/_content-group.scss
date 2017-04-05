@@ -1,0 +1,66 @@
+.content-group.columns {
+    background: $whitebackground;
+    margin: 0;
+    padding: 0;
+    
+    ul {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 2em;
+        text-indent: -1em;
+        margin-bottom: 12px;
+    }
+    
+    &.has-divider {
+            .column {
+            position: relative;
+            &:before {
+                background: -moz-linear-gradient(top, $divider 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, $divider 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom, $divider 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                content: "";
+                height: 100%;
+                width: 2px;
+                display: block;
+                position: absolute;
+                left: -12px;
+            }
+            &:first-child {
+                &:before{
+                    background: none;
+                    width: 0;
+                }
+            }
+        }
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    blockquote {
+        margin: 10px auto 25px auto;
+        width: 75%;
+        font-weight: 700;
+    }
+    &.transparent {
+        background: transparent;
+    }
+    .column {
+        padding: 30px 15px;
+        &:first-child {
+            padding-left: 30px;
+        }
+        &:last-child {
+            padding-right: 30px;
+        }
+        &.dark, .dark {
+            background: $blackbackground;
+        }
+        &.transparent, .transparent {
+            background: transparent;
+        }
+        &.white, .white {
+            background: $whitebackground;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+#clockdiv {
+    display: flex;
+    > div {
+        flex: 1;
+    }
+    p {
+        display: none;
+    }
+}

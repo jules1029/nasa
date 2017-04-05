@@ -7,3 +7,8 @@
 	background: radial-gradient(top, ellipse cover, $from 0%, $to 100%);
 	background-color: $from;
 }
+
+@mixin linear-gradient($start, $end, $from, $to) {
+    background: linear-gradient($start $end, $from, $to);
+    background: -webkit-linear-gradient($start, $end, $from, $to);
+}

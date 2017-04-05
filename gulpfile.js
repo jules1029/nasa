@@ -21,8 +21,13 @@ gulp.task( 'scss', () => {
 		.pipe(gulp.dest('./dist'))
 });
 
+gulp.task( 'js', () => {
+	return gulp.src('./src/app.js')
+		.pipe(gulp.dest('./dist'))	
+} );
+
 gulp.task( 'watch', () => {
-	gulp.watch('./src/**/*.scss', ['scss']);	
+	gulp.watch('./src/**/*.*', ['scss', 'js']);	
 });
 
 gulp.task( 'webserver', [ 'watch', 'webserver:browser-sync' ] );
