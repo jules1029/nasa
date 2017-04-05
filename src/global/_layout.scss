@@ -7,7 +7,7 @@ body {
         margin: 0 auto;
         .header {
             overflow: hidden;
-            background: rgba(0, 0, 0, 0.8);
+            background: $navbackground;
             padding: 15px 30px;
             .header-left {
                 float: left;
@@ -19,6 +19,22 @@ body {
                     padding-left: 30px;
                 }
             }
+        }
+        .nav {
+            @include radial-gradient($navgradientstart, $navbackground);
+            margin-top: 5px;
+            border-top: 1px solid #fff;
+            .nav-item {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+        
+        .footer {
+             @include radial-gradient($navgradientstart, $navbackground);
+             display: flex;
+             justify-content: space-between;
+             padding: 15px 30px;
         }
     }
 }
