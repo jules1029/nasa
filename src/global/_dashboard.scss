@@ -1,25 +1,15 @@
 .slide {
-    background: $whitebackground;
-    .slide-header {
-        background: #fff;
-        padding: 30px;
-        text-align: center;
-        h3 {
-            font-size: 24px;
-            span {
-                font-size: 16px;
-                color: black;
-            }
-        }
-    }
+    
     .qsm_results {
         padding: 30px;
         .qmn_question_answer {
+            padding: 10px 30px;
             * {
                 display: none;
             }
             .question-title, .queston-title, .question-tile {
                 display: block;
+                color: $tired;
             }
             &:nth-child(even) {
                 background: rgba(0,0,0, 0.04);
@@ -27,6 +17,26 @@
             &:nth-child(odd) {
                 background: rgba(0,0,0, 0.08);
             }
+        }
+    }
+}
+
+.entry-content {
+    position: relative;
+    .total-score {
+        position: absolute;
+        top: 0;
+        font-size: 140px;
+        color: $tired;
+        left: 30%;
+        width: 320px;
+        text-align: center;
+        span {
+            display: block;
+            font-size: 23px;
+            position: absolute;
+            bottom: 11px;
+            right: 35px;
         }
     }
 }

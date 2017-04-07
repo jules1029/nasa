@@ -1,9 +1,10 @@
 var clock = document.querySelector('#clockdiv');
-var daysSpan = clock.querySelector('.days');
-var hoursSpan = clock.querySelector('.hours');
-var minutesSpan = clock.querySelector('.minutes');
-var secondsSpan = clock.querySelector('.seconds');
-
+if(clock) {
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+}
 function getTimeRemaining(endtime){
   var t = Date.parse(endtime) - Date.parse(new Date());
   var seconds = Math.floor( (t/1000) % 60 );
@@ -29,6 +30,28 @@ function updateClock(){
         clearInterval(timeinterval);
     }
 }
-
-updateClock(); // run function once at first to avoid delay
-var timeinterval = setInterval(updateClock,1000);
+if(clock) {
+  updateClock(); // run function once at first to avoid delay
+  var timeinterval = setInterval(updateClock,1000);
+}
+(function($){
+  $(function() {
+    $(".qsm_results .qmn_question_answer ").each(function(i, e) {
+      $(e).contents().filter(function(){
+        return (this.nodeType == 3);
+      }).remove();
+    });
+    $('.slides').slick({
+      arrows: false
+    });
+     $($('.badges a')[0]).addClass('current');
+    
+    $('.badges a').on('click', function(e) {
+      $('.slides').slick('slickGoTo', $(e.target).closest('a').index());
+    });
+    $('.slides').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      $('.badges a').removeClass('current');
+      $($('.badges a')[nextSlide]).addClass('current');  
+    });
+  });
+}(jQuery));

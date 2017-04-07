@@ -10,6 +10,9 @@ gulp.task( 'webserver:browser-sync', () => {
 		serveStatic: [{
 			route: '/wp-content/themes/twentyseventeen',
 			dir: './dist'
+		}, {
+			route: '/wp-content/themes/twentyseventeen/assets/js/',
+			dir: './dist'
 		}],
 		reloadDebounce: 100
 	})
