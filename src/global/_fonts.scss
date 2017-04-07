@@ -16,7 +16,9 @@ h2 {
     margin-bottom: 10px;
     line-height: 28px;
 }
-
+.question-title, .queston-title, .question-tile {
+    display: none;
+}
 h3 {
     color: $tired;
 }
