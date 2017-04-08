@@ -36,11 +36,8 @@ if(clock) {
 }
 (function($){
   $(function() {
-    $(".qsm_results .qmn_question_answer ").each(function(i, e) {
-      $(e).contents().filter(function(){
-        return (this.nodeType == 3);
-      }).remove();
-    });
+    $('#send_credentials_via_email').prop('checked', true);
+    $('.entry-content > p:empty').remove();
     $('.slides').slick({
       arrows: false
     });
@@ -53,5 +50,8 @@ if(clock) {
       $('.badges a').removeClass('current');
       $($('.badges a')[nextSlide]).addClass('current');  
     });
+    $('.accordion').accordion({ collapseable: true } );
+    
+    $('.wppb-form-field.wppb-send-credentials-checkbox' ).html('<label for="send_credentials_via_email"><input id="send_credentials_via_email" type="checkbox" name="send_credentials_via_email" value="sending" required>I accept the contest <a href="#">rules and conditions.</a></label>');
   });
 }(jQuery));

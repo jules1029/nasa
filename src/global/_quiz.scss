@@ -1,0 +1,37 @@
+.light {
+   background: rgba(0,0,0, 0.04); 
+}
+
+.dark-row {
+    background: rgba(0,0,0, 0.08);
+}
+
+.accordion {
+    padding: 0 30px;
+    h3 {
+        padding: 20px 0 20px 15px;
+        cursor: pointer;
+        span {
+            float: right;
+            color: rgb(74, 74, 74);
+        }
+        &.correct {
+             span {
+                color: green;
+            }
+        }
+    }
+    > div {
+        padding-left: 15px;
+    }
+    .ui-state-default {
+        &:before {
+            content: "+ ";
+        }
+    }
+    .ui-state-active {
+        &:before {
+            content: "- ";
+        }
+    }
+}

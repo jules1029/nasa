@@ -4,12 +4,14 @@
         padding: 30px;
         .qmn_question_answer {
             padding: 10px 30px;
-            * {
-                display: none;
-            }
-            .question-title, .queston-title, .question-tile {
-                display: block;
-                color: $tired;
+            overflow: hidden;
+            color: $tired; 
+            span {
+                color: green;
+                float: right;
+                &.no-points {
+                    color: rgb(74, 74, 74);
+                }
             }
             &:nth-child(even) {
                 background: rgba(0,0,0, 0.04);
