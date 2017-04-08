@@ -34,4 +34,48 @@
             content: "- ";
         }
     }
+    input {
+        display: block;
+        height: 35px;
+        width: 40%;
+       margin-top: 25px;
+        border: 1px solid #aaa;
+        border-radius: 2px;
+        color: #525252;
+    }
+    input[type="submit"] {
+        width: auto;
+        margin-top: 0;
+        box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
+        background-color: white;
+    }
+}
+.not-logged-in {
+    color: $tired;
+}
+.error, .success {
+    display: none;
+    position: absolute;
+    top: 40%;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+.error {
+    color: $tired;
+}
+.success {
+    color: green;
+}
+.loading {
+    * {
+        visibility: hidden;
+    }
+    background : url("/wp-content/uploads/2017/04/ajax-loader.gif") scroll no-repeat center center;
+}
+.qmn_quiz_container.hide {
+    position: relative;
+    form {
+        visibility: hidden;
+    }
 }
