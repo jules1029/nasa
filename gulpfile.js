@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 gulp.task( 'webserver:browser-sync', () => {
 	browserSync.init({
 		port: 8081,
-		proxy: 'http://e92.936.myftpupload.com',
+		proxy: 'http://stemnauts.com',
 		serveStatic: [{
 			route: '/wp-content/themes/twentyseventeen',
 			dir: './dist'
