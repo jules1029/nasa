@@ -39,7 +39,8 @@ if(clock) {
     $('#send_credentials_via_email').prop('checked', true);
     $('.entry-content > p:empty').remove();
     $('.slides').slick({
-      arrows: false
+      arrows: false,
+      swipe: false
     });
      $($('.badges a')[0]).addClass('current');
     
@@ -50,7 +51,7 @@ if(clock) {
       $('.badges a').removeClass('current');
       $($('.badges a')[nextSlide]).addClass('current');  
     });
-    $('.accordion').accordion({ collapseable: true } );
+    $('.accordion').accordion({ collapsible : true, heightStyle: 'content' } );
     
     $('.wppb-form-field.wppb-send-credentials-checkbox' ).html('<label for="send_credentials_via_email"><input id="send_credentials_via_email" type="checkbox" name="send_credentials_via_email" value="sending" required>I accept the contest <a href="#">rules and conditions.</a></label>');
   });
