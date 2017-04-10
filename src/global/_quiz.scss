@@ -9,8 +9,9 @@
 .accordion {
     padding: 0 30px;
     h3 {
-        padding: 20px 0 20px 15px;
+        padding: 20px 15px;
         cursor: pointer;
+        font-size: 22px;
         span {
             float: right;
             color: rgb(74, 74, 74);
@@ -30,11 +31,27 @@
     .ui-state-default {
         &:before {
             content: "+ ";
+            padding: 30px 35px 30px 0;
+            margin-right: 10px;
+            background: url("/wp-content/uploads/2017/04/stemnauts-quiz-light-incomplete.png") scroll no-repeat right;
+        }
+        &.correct {
+            &:before {
+                background: url("/wp-content/uploads/2017/04/stemnauts-quiz-light-complete.png") scroll no-repeat right;
+            }
         }
     }
     .ui-state-active {
         &:before {
             content: "- ";
+             padding: 30px 35px 30px 0;
+            margin-right: 10px;
+            background: url("/wp-content/uploads/2017/04/stemnauts-quiz-light-incomplete.png") scroll no-repeat right;
+        }
+        &.correct {
+            &:before {
+                background: url("/wp-content/uploads/2017/04/stemnauts-quiz-light-complete.png") scroll no-repeat right;
+            }
         }
     }
     input {
@@ -82,3 +99,45 @@
         visibility: hidden;
     }
 }
+
+.ui-accordion-header, .ui-accordion-content {
+  background-color: $blackbackgroundeight;
+  &:nth-of-type(odd) {
+    background-color: $blackbackgroundfour;
+  }
+}
+
+
+.inner-paragraph {
+  background-color: $whitebackgroundsixty;
+  padding: 20px;
+  color: grey;
+}
+
+
+.quiz_section .qmn_button {
+        color: #fff;
+        font-size: 14px;
+        background: $tired;
+        border-radius: 30px;
+        -moz-border-radius: 30px;
+        -webkit-border-radius: 30px;
+        padding: 7px 25px 7px 15px;
+        text-align: center;
+        border: solid 3px $buttonborder;
+        margin-bottom: 20px;
+        display: inline-block;
+        position: relative;
+        font-weight: 700;
+			&:after { 
+			content:"»";
+			font-size:20px;
+			letter-spacing: 2px;
+			font-family:Lato;
+			padding:0 0 0 5px;
+			color:white;
+			position:absolute;
+			top:1px;
+			right: 10px;
+		}
+    }
