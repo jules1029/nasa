@@ -1,0 +1,22 @@
+.leader-board-rank {
+    padding-top: 5px;
+    margin-top: 5px;
+    color: lightyellow;
+    border-top: 2px solid white;
+}
+
+.leaderboard-page {
+    .leader-board-rank {
+        color: inherit;
+    }
+    ol li {
+         padding: 10px 30px;
+            overflow: hidden;
+            &:nth-child(even) {
+                background: rgba(0,0,0, 0.04);
+            }
+            &:nth-child(odd) {
+                background: rgba(0,0,0, 0.08);
+            }
+    }
+}

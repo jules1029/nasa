@@ -1,0 +1,94 @@
+.mission-1 {
+    background: url("/wp-content/uploads/2017/04/stemnauts-patch1-iss.png") scroll no-repeat;
+    &.disabled {
+        background: url("/wp-content/uploads/2017/04/stemnauts-patch1-iss-off.png") scroll no-repeat;
+    }
+}
+
+.mission-2 {
+    background: url("/wp-content/uploads/2017/04/stemnauts-patch2-earth.png") scroll no-repeat;
+    &.disabled {
+        background: url("/wp-content/uploads/2017/04/stemnauts-patch2-earth-off.png") scroll no-repeat;
+    }
+}
+
+.mission-3 {
+   background: url("/wp-content/uploads/2017/04/stemnauts-patch3-solar-system.png") scroll no-repeat;
+    &.disabled {
+        background: url("/wp-content/uploads/2017/04/stemnauts-patch3-solar-system-ff.png") scroll no-repeat;
+    } 
+}
+
+.mission-4 {
+   background: url("/wp-content/uploads/2017/04/stemnauts-patch4-mars.png") scroll no-repeat;
+    &.disabled {
+        background: url("/wp-content/uploads/2017/04/stemnauts-patch4-mars-off.png") scroll no-repeat;
+    } 
+}
+
+.mission-5 {
+   background: url("/wp-content/uploads/2017/04/stemnauts-patch5-flight.png") scroll no-repeat;
+    &.disabled {
+        background: url("/wp-content/uploads/2017/04/stemnauts-patch5-flight-off.png") scroll no-repeat;
+    } 
+}
+
+.mission-6 {
+    background: url("/wp-content/uploads/2017/04/stemnauts-patch6-tech.png") scroll no-repeat;
+    &.disabled {
+        background: url("/wp-content/uploads/2017/04/stemnauts-patch6-tech-off.png") scroll no-repeat;
+    }
+}
+
+.badges {
+    display: flex;
+    padding: 30px 30px 45px 30px;
+    background: $whitebackground;
+    > a {
+        flex: 1;
+        position: relative;
+        > div {
+            height: 185px;
+            width: 141px;
+            position: relative;
+            h4  {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+                min-height: 48px;
+            }
+        }
+        &.current:after {
+            content: "";
+            position: absolute;
+            width: 141px;
+            height: 30px;
+            bottom: -45px;
+            background: url("/wp-content/uploads/2017/04/carousel-caret.png") scroll no-repeat bottom center;
+        }
+    }
+}
+
+.slides {
+    background: $whitebackground;
+    .slide-header {
+        background: #fff;
+        padding: 15px 30px;
+        text-align: center;
+        h3 {
+            font-size: 24px;
+            span {
+                font-size: 16px;
+                color: black;
+            }
+        }
+    }
+    .slick-track{
+        display: flex;
+        .slick-slide{
+            height: auto;
+            float: none;
+        }
+    }
+}
