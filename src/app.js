@@ -21,7 +21,7 @@ function getTimeRemaining(endtime){
 }
 
 function updateClock(){
-    var t = getTimeRemaining(new Date(2017, 5, 31));
+    var t = getTimeRemaining(new Date(2017, 4, 31));
     daysSpan.innerHTML = ('0' + t.days).slice(-2);
     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
