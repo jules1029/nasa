@@ -3,20 +3,61 @@
     margin-top: 5px;
     color: lightyellow;
     border-top: 2px solid white;
+    a {
+        display: none;
+    }
 }
 
 .leaderboard-page {
+    &.content-group {
+        img {
+            display: inline;
+        }
+    }
     .leader-board-rank {
         color: inherit;
+        a {
+            display: inline;
+        }
     }
-    ol li {
-         padding: 10px 30px;
-            overflow: hidden;
-            &:nth-child(even) {
-                background: rgba(0,0,0, 0.04);
+   
+    table tr {
+        &:nth-child(even) {
+            background: rgba(0,0,0, 0.04);
+        }
+        &:nth-child(odd) {
+            background: rgba(0,0,0, 0.08);
+        }
+        td, th {
+            padding: 10px 30px;
+            &:last-child {
+                a {
+                    padding-left: 20px;
+                }
+                width: 15%;
             }
-            &:nth-child(odd) {
-                background: rgba(0,0,0, 0.08);
+            &:first-child {
+                width: 25%;
             }
+        }    
+        th {
+            color: $tired;
+        }
+    }
+    h3 {
+        font-size: 22px;
+    }
+    .your-rank {
+        margin-top: 20px;
+    }
+    .your-rank-table {
+        td, th {
+            &:first-child, &:last-child {
+                width: auto;   
+            }
+            &:last-child {
+                text-align: right;
+            }
+        }
     }
 }
