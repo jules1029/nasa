@@ -6,6 +6,21 @@
     background: rgba(0,0,0, 0.08);
 }
 
+.slick-slide {
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+.slick-list.draggable {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .accordion {
     padding: 0 30px;
     h3 {
@@ -119,8 +134,11 @@
     display: inline;
   }
   a {
-    margin-left:20px;
-	margin-right:20px; 
+	&.file-icon {
+	    background: url("/wp-content/uploads/2017/04/file_icon.png") scroll no-repeat left center;
+	    display: block;
+	    padding: 10px 0 15px 65px;
+	}
   }
 }
 
