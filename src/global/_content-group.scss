@@ -65,4 +65,17 @@
             border-bottom: 2px solid gray;
         }
     }
+    .dashboard-nested {
+        padding: 12px;
+    }
+    .software-promo a, .software-promo p {
+        display: inline-block;
+    }
+    .software-promo img { 
+        padding-right: 20px;
+    }
+    .software-promo p {
+        vertical-align: top;
+        width: 80%;
+    }
 }
