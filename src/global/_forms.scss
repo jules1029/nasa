@@ -36,7 +36,7 @@
             text-indent: 0;
             color: black;
         }
-        .wppb-send-credentials-checkbox, .login-remember {
+        .wppb-send-credentials-checkbox, .login-remember, .wppb-checkbox-terms-and-conditions, .wppb-checkbox {
             label {
                 position: relative;
                 padding-left: 30px;
@@ -45,8 +45,11 @@
                 width: 20px;
                 display: inline;
                 position: absolute;
-                bottom: -6px;
+                bottom: 37px;
                 left: 0;
+            }
+            #custom_field_4 {
+                bottom: 72%;
             }
         }
         .form-submit, .login-submit {

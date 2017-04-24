@@ -52,8 +52,6 @@ if(clock) {
       $($('.badges a')[nextSlide]).addClass('current');  
     });
     $('.accordion').accordion({ collapsible : true, heightStyle: 'content' } );
-    
-    $('.wppb-form-field.wppb-send-credentials-checkbox' ).html('<label for="send_credentials_via_email"><input id="send_credentials_via_email" type="checkbox" name="send_credentials_via_email" value="sending" required>I accept the contest <a href="#">rules and conditions.</a></label>');
     $('.facebook-share').on('click', function(e){
       e.preventDefault();
       FB.ui({
